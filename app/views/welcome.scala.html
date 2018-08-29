@@ -9,10 +9,21 @@
 <h1>Northwest Passage</h1>
 <h2>A Game of Cunning and Skill</h2>
 <p>
+    <br>
     This game is meant to be played by only the most skilled gamers.  Play at your own risk!
+
+    <img src="assets/images/skull.jpg" alt="pirate skull" title="pirateSkull" height="200" width="200"/>
 </p>
+<form action="@routes.GameController.postStart" method="POST"></form>
+@CSRF.formField
+<br>
+
 <form action="@routes.GameController.postStart" method="POST">
     @CSRF.formField
+    <label for="name">name:</label>
+    <input type="text" name="playername" id="name">
+<br>
+    <br>
     <input type="submit" value="Let's Do This!"/>
 </form>
 <form action="@routes.GameController.getKittens" method="GET">

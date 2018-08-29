@@ -12,13 +12,14 @@
     Most of your sailor friends believe that your best chance of success is to sail northwest above North America.
     However, some of your crew believe you should try going east over Russia or north over the top of the world instead.
 </p>
+<img src="assets/images/crew.jpg" alt="Feral kitten" title="Feralkitten"height="300"width="400"/>
 <form action="@routes.GameController.postWestFromEngland" method="POST">
     @CSRF.formField
     <input type="submit" value="Sail West"/>
 </form>
-<form action="@routes.GameController.postNorthFromEngland" method="POST">
+<form action="@routes.GameController.postABitNorth" method="POST">
     @CSRF.formField
-    <input type="submit" value="Sail North"/>
+    <input type="submit" value="Sail a bit North"/>
 </form>
 <form action="@routes.GameController.postEastFromEngland" method="POST">
     @CSRF.formField

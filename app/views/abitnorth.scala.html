@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+@import helper._
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>On the Way North</title>
+</head>
+<body>
+<h1>Canuks Running Amuck!</h1>
+<p>You sail North for a few days before you hit land. After meeting the locals, you learn you are in "Canada."</p>
+    The native people talk funny and say "eh?" alot.
+    They wear ugly sweaters and their leader in Justin Bieber.<p>
+You decide for your own sanity, it is time to leave..
+</p>
+<img src="assets/images/justinbieber.jpg" alt="the biebs" title="the biebs" height="300" width="400"/>
+<form action="@routes.GameController.postHomePort" method="POST">
+    @helper.CSRF.formField
+    <input type="submit" value="Time to go South yo."/>
+</form>
+<form action="@routes.GameController.postNorthFromEngland" method="POST">
+    @helper.CSRF.formField
+    <input type="submit" value="Time to freeze your beards off! Northward!!"/>
+</form>
+</body>
+</html>

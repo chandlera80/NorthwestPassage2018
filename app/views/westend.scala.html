@@ -1,3 +1,4 @@
+@(name : String)
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,12 @@
 <p>You reach China and load up on fidget spinners.
     When you get back to England the Queen rewards you with a monopoly on importing them.
     You spin happily ever after.
-    The end.
+    The end for @name.
 </p>
+<img src="assets/images/figit.jpg" alt="figit" title="figit"height="300"width="400"/>
+<form action="@routes.GameController.getWelcome" method="GET">
+    @helper.CSRF.formField
+    <input type="submit" value="Try Again"/>
+</form>
 </body>
 </html>
